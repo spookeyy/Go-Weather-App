@@ -55,7 +55,7 @@ export default function SearchBar({ city, setCity, onSearch }: SearchBarProps) {
             whileTap={{ scale: 0.98 }}
             type="submit"
             disabled={!searchInput.trim()}
-            className="bg-primary-500 text-white font-semibold px-5 py-3 rounded-2xl hover:bg-primary-600 transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-md"
+            className="bg-primary-500 dark:bg-primary-600 text-gray-800 dark:text-white font-semibold px-5 py-3 rounded-2xl hover:bg-primary-600 dark:hover:bg-primary-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-md"
           >
             Search
           </motion.button>
