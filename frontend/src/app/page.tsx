@@ -13,7 +13,7 @@ export default function Home() {
 
   useEffect(() => {
     if (!weatherData && !isLoading && !error) {
-      const defaultCity = "London";
+      const defaultCity = "Nairobi";
       setCity(defaultCity);
       searchCity(defaultCity);
     }
