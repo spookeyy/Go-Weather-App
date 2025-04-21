@@ -6,6 +6,10 @@ A full-stack weather forecast application built using a decoupled architecture.
 
 ---
 
+## Screenshots
+
+![WeatherData Display](image.png)
+
 ## Prerequisites
 
 Before you begin, ensure you have the following installed:
