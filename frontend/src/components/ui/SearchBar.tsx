@@ -38,7 +38,7 @@ export default function SearchBar({ city, setCity, onSearch }: SearchBarProps) {
         className="flex flex-col sm:flex-row items-stretch gap-4"
       >
         <div className="relative flex-grow">
-          <FaSearch className="absolute left-4 top-1/2 transform -translate-y-1/2 text-slate-400" />
+          <FaSearch className="absolute left-4 top-1/2 transform -translate-y-1/2 text-slate-700" />
           <input
             type="text"
             value={searchInput}
