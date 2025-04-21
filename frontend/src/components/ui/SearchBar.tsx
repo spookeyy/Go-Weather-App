@@ -45,7 +45,7 @@ export default function SearchBar({ city, setCity, onSearch }: SearchBarProps) {
             onChange={handleChange}
             placeholder="Search for a city..."
             aria-label="City name"
-            className="w-full py-3 pl-12 pr-4 rounded-2xl bg-white/10 text-white backdrop-blur-md shadow-lg border border-white/20 focus:outline-none focus:ring-2 focus:ring-primary-500 placeholder-slate-200 transition-all"
+            className="w-full py-3 pl-12 pr-4 rounded-2xl bg-white/10 text-gray-700 dark:text-white backdrop-blur-md shadow-lg border border-white/20 focus:outline-none focus:ring-2 focus:ring-primary-500 placeholder-slate-200 transition-all"
           />
         </div>
 
