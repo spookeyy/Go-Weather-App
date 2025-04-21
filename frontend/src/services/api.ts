@@ -1,6 +1,7 @@
 import { GeocodingResult, TemperatureUnit, WeatherResponse } from '@/types';
 
-const API_URL = process.env.API_URL || 'http://localhost:5000/api';
+// const API_URL = process.env.API_URL || 'http://localhost:5000/api';
+const API_URL = process.env.API_URL || "https://go-weather-app-51r0.onrender.com/api";
 
 // fetching weather data for a city
 // parameter city, The sity name to get weather for
