@@ -1,3 +1,10 @@
+[build]
+  command = "yarn build"
+  publish = ".next"
+
+[dev]
+  command = "yarn dev"
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
