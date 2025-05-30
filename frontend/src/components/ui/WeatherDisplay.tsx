@@ -20,7 +20,7 @@ type Props = {
 
 export default function WeatherDisplay({ weatherData }: Props) {
   const { current, location, forecast } = weatherData;
-  console.log("current ", current)
+  console.log("current ", current);
   // Function to get weather icon based on condition
   const getWeatherIcon = (condition: string, size = 48) => {
     const conditionLower = condition.toLowerCase();
@@ -39,7 +39,7 @@ export default function WeatherDisplay({ weatherData }: Props) {
 
   // Format date as "21st April 2024"
   const formatDate = (dateString: string) => {
-    const date = new Date(dateString);
+    const date = new Date(parseInt(dateString) * 1000); // Multiply by 1000 to convert to milliseconds
     const day = date.getDate();
     const month = date.toLocaleString("default", { month: "long" });
     const year = date.getFullYear();
