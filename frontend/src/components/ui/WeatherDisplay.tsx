@@ -54,6 +54,30 @@ export default function WeatherDisplay({ weatherData }: Props) {
     return `${ordinal(day)} ${month} ${year}`;
   };
 
+  function fixMalformedDate(dateStr: string): string {
+    // Attempt to detect and correct the malformed year
+    const parts = dateStr.split(" ");
+    if (parts.length === 4 && parts[3].length > 4) {
+      // Keep only the last 4 digits as the year (e.g., "303015" → "2025")
+      parts[3] = parts[3].slice(-4);
+    }
+  
+    // Reconstruct the corrected date string
+    const correctedDateStr = parts.join(" ");
+  
+    // Try parsing into a proper Date object
+    const date = new Date(correctedDateStr);
+  
+    // Format to "Fri, 30 May 2025"
+    return date.toLocaleDateString("en-GB", {
+      weekday: "short",
+      day: "2-digit",
+      month: "short",
+      year: "numeric",
+    });
+  }
+  
+
   return (
     <div className="rounded-3xl p-8 bg-gradient-to-br from-slate-800 to-slate-900 text-white shadow-2xl w-full max-w-5xl mx-auto animate-fade-in-up">
       <div className="flex flex-col items-center mb-8">
@@ -135,7 +159,7 @@ export default function WeatherDisplay({ weatherData }: Props) {
         </div>
       </div>
       <div className="mt-8 text-center text-sm text-slate-400">
-        <p>Last updated: {current.formattedDate}</p>
+        <p>Last updated: {fixMalformedDate(current.formattedDate)}</p>
         <p className="flex items-center justify-center gap-4 mt-2">
           <span className="flex items-center gap-1">
             <WiSunrise size={20} /> {current.formattedSunrise}
