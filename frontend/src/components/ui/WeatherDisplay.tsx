@@ -20,7 +20,7 @@ type Props = {
 
 export default function WeatherDisplay({ weatherData }: Props) {
   const { current, location, forecast } = weatherData;
-
+  console.log("current ", current)
   // Function to get weather icon based on condition
   const getWeatherIcon = (condition: string, size = 48) => {
     const conditionLower = condition.toLowerCase();

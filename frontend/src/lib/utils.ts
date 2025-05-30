@@ -1,9 +1,10 @@
 import { TemperatureUnit } from "@/types";
 
-// format temperature with appropriate unit
-//parameter temp, this is the temperature value
-// parameter unit, this is the temperature unit
-// return formatted temperature string
+/** format temperature with appropriate unit
+* @param temp, this is the temperature value
+  @param unit, this is the temperature unit
+  @returns formatted temperature string
+*/
 
 export function formatTemperature(temp: number, unit: TemperatureUnit): string {
     const rounded = Math.round(temp);
