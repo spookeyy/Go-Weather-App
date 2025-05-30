@@ -67,7 +67,7 @@ export default function WeatherDisplay({ weatherData }: Props) {
         </div>
 
         <div className="text-lg text-center">
-          <div>{formatDate(current.formattedDate)}</div>
+          <div>{formatDate(current.timestampUTC.toString())}</div>
           <div className="font-semibold">{location.city}</div>
         </div>
       </div>

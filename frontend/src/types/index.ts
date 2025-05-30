@@ -19,7 +19,7 @@ export interface CurrentWeather {
   visibility: number;
   sunrise: number;
   sunset: number;
-  timestampUtc: number;
+  timestampUTC: number;
   formattedDate: string;
   formattedSunrise: string;
   formattedSunset: string;
